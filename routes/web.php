@@ -9,6 +9,10 @@ Route::get('/', function () {
     ]);
 });
 
+Route::get('/contact', function () {
+    return view('contact');
+});
+
 Route::get('/jobs', function () {
     return view('jobs', [
         'jobs' => Job::all()
