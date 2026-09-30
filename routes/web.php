@@ -14,7 +14,7 @@ Route::get('/contact', function () {
 });
 
 Route::get('/jobs', function () {
-    $jobs = Job::with('employer')->get(); // eager loading using the relationship name 
+    $jobs = Job::with('employer')->paginate(5); // eager loading using the relationship name 
     return view('jobs', [                // fixes N+1 problem
         'jobs' => $jobs
     ]);
