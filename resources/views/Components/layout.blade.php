@@ -123,9 +123,9 @@
                                 Welcome, everything seems great!
                             </h2>
                         </div>
-                        <div class="flex flex-none items-center justify-center gap-2 rounded-sm px-2 py-3 sm:justify-end sm:bg-transparent sm:px-0">
-
-                        </div>
+                        <x-button href="/jobs/create">
+                            Create Job
+                        </x-button>
                     </div>
                 </div>
             </div>

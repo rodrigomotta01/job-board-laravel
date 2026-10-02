@@ -4,6 +4,14 @@
         Create Job
     </x-slot:heading>
 
+    @if ($errors->any())
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li class="p-1 text-red-500 text-sm bg-red-200 border border-1 border-red-400 text-center rounded-md mt-2 mb-2"> {{ $error }} </li>
+            @endforeach
+        </ul>
+    @endif
+
     <form class="max-w-sm mx-auto" method="POST" action="/jobs">
         @csrf
         <div class="mb-5">
